@@ -1,11 +1,12 @@
-var students=["Al","Ron","John","Bob"]
+const Students=[]
 
-students.push("Stan");
-students.sort();
+for (let i = 0; i < 5; i++) {
+    const student=prompt("Enter your name");
+    Students.push(student);  
+} 
+Students.sort();
+//console.log (Students);
 
-students = students.join(', ');
-
-
+var students = Students.join(', ');
 
 alert(students)
-
