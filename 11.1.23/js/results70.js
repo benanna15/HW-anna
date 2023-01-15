@@ -11,7 +11,7 @@ for (let i = 0; i < 50; i++) {
     Results.push(Result);
 
    /*  console.log(Names);
-    console.log (Results); */
+    console.log (Results); */ 
 }
 
 var groupA = 0;
