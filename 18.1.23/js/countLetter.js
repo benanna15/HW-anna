@@ -15,19 +15,21 @@ if(!obj[elem]){
     
      obj[elem]=1
      count.amount=obj[elem]
-
+arr.push(count)
+console.log(arr)
 }
 else{
     obj[elem]++
     count.amount=obj[elem]++
-
-
+    arr.pop(count)
+    arr.push(count)
+console.log(arr)
 }
 
 console.log(obj)
 }
 
-return  obj
+return  arr
 }
 
 console.log(qty())
