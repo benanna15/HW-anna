@@ -92,19 +92,19 @@ function productSquare(_Products){
 
         var models =document.createElement("h1")
         models.className="card-title"
-        models.innerHTML=element.model
+        models.innerText=element.model
 
         var brands=document.createElement("p")
         brands.className="card-text"
-        brands.innerHTML=element.brand
+        brands.innerText=element.brand
 
         var prices=document.createElement("p")
         prices.className="card-text"
-        prices.innerHTML=element.price
+        prices.innerText=element.price
 
         var category=document.createElement("p")
         category.className="card-text"
-        category.innerHTML=element.categories
+        category.innerText=element.categories
 
         container.append(section)
         section.append(div)
