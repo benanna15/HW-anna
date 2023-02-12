@@ -21,30 +21,30 @@ function myCode() {
     var btn = myButton("submit", " btn-info inputBtn", "Enter", addCode);
     div.append(input, btn);
     MainDiv.append(div);
-
-    function addCode() {
-        this.parentElement.parentElement.remove();
-        var section = document.createElement("section");
-        section.className = "grid-container";
-        for (let i = 0; i < 10; i++) {
-            const element = [i];
-            buttons = myButton("submit", " btn-ocean", i, verification, i);
-            btns.push(buttons);
-            section.append(buttons);
-            MainDiv.append(section);
-            function verification() {
-                if (t != null) clearTimeout(t);
-                code += i;
-                var button = this;
-                button.classList.add("btn-blue");
-                t = setTimeout(function () {
-                    reset()
-                }, 3000);
-                if (code.length === 4) checkCode();
-            }
+}
+function addCode() {
+    this.parentElement.parentElement.remove();
+    var section = document.createElement("section");
+    section.className = "grid-container";
+    for (let i = 0; i < 10; i++) {
+        const element = [i];
+        buttons = myButton("submit", " btn-ocean", i, verification, i);
+        btns.push(buttons);
+        section.append(buttons);
+        MainDiv.append(section);
+        function verification() {
+            if (t != null) clearTimeout(t);
+            code += i;
+            var button = this;
+            button.classList.add("btn-blue");
+            t = setTimeout(function () {
+                reset()
+            }, 3000);
+            if (code.length === 4) checkCode();
         }
     }
 }
+
 function myButton(_id, _class = "", _text, _callback, _value) {
     var div = document.createElement("div");
     var btn = document.createElement("button");
