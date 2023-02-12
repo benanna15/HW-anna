@@ -32,6 +32,7 @@ function addCode() {
         btns.push(buttons);
         section.append(buttons);
         MainDiv.append(section);
+
         function verification() {
             if (t != null) clearTimeout(t);
             code += i;
