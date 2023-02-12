@@ -1,0 +1,57 @@
+#main {
+    display: flex;
+}
+
+.input {
+    margin: 5vw 35vw 0 35vw;
+    text-align: center;
+    width: 20vw;
+
+}
+
+.inputBtn {
+    margin: 1vw 35vw;
+    text-align: center;
+    width: 20vw;
+
+}
+
+
+.btn-ocean {
+
+    color: #fff;
+    background-color: #2f7c91;
+    border-color: #004E64;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    border-radius: 0; 
+
+}
+.btn-blue {
+
+    color: #fff;
+    background-color: #3dcbf2;
+    border-color: #048cb2;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+     border-radius: 0; 
+
+}
+
+.grid-container {
+    border: 2px solid #003D4F;
+    margin: 30px auto;
+    display: grid;
+    row-gap: 50px;
+    column-gap: 50px;
+    padding: 50px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+ 
+  section :nth-child(1){
+    grid-column: 2 / 3;
+    grid-row: 4 /4
+
+  }
