@@ -5,12 +5,8 @@ import * as Control from "../register/controller.js";
 
 
 
-export function init(){
-    console.log(("I started the engine. "));
-    var users = localStorage.getItem("users");
-    var user = localStorage.getItem("user");
+export function init(user,users){
 
-console.log(users,user);
 
     var form =View.init();
     console.log(form);

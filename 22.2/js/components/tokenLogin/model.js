@@ -3,9 +3,9 @@ import { Auhtools } from "../../handlers/authTools.js";
 
 
 export function cToken(token, users) {
-  var parseUsers = JSON.parse(users);
-  for (var i = 0; i < parseUsers.length; i++) {
-    if (parseUsers[i].token === token) {
+ 
+  for (var i = 0; i < users.length; i++) {
+    if (users[i].token === token) {
       return true;
     }
   }
@@ -13,12 +13,12 @@ export function cToken(token, users) {
 }
 
 export function uToken(email, users) {
-  var parseUsers = JSON.parse(users);
+ 
   var newToken = Auhtools.generateToken();
-  for (var i = 0; i < parseUsers.length; i++) {
-    if (parseUsers[i].email === email) {
-      parseUsers[i].token = newToken;
-      localStorage.setItem("users", JSON.stringify(parseUsers));
+  for (var i = 0; i <users.length; i++) {
+    if (users[i].email === email) {
+      users[i].token = newToken;
+      localStorage.setItem("users", JSON.stringify(users));
       localStorage.setItem("user", JSON.stringify({
         email: email,
         token: newToken
