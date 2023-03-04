@@ -1,5 +1,5 @@
 function r() {
-    return Math.floor( Math.random() * 1000) + 3000
+    return Math.floor( Math.random() * 500) + 3000
 }
 
 export function start() {
@@ -25,13 +25,35 @@ export function start() {
 
 }
 
+export function orderChassis(response) {
+    return new Promise((resolve, reject) => {
+        console.log("chassis");
+        setTimeout(() => {
+            var obj = {};
+
+            if (response[0].part == "chassis") {
+                resolve(response);
+            }
+            else {
+                obj.error = "Wrong part in orderChassis"
+                obj.status = 401;
+                reject(obj)
+            }
+
+
+
+        }, r())
+    })
+
+}
+
 export function orderEngine(response) {
     console.log(response);
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             var obj = {};
 
-            if (response[0].part == "engine") {
+            if (response[1].part == "engine") {
                 console.log(response);
                 resolve(response);
             }
@@ -50,7 +72,7 @@ export function orderWheels(response) {
         setTimeout(() => {
             var obj = {};
 
-            if (response[1].part == "wheels") {
+            if (response[2].part == "wheels") {
 
                 resolve(response);
             }
@@ -74,7 +96,7 @@ export function orderSeats(response) {
         setTimeout(() => {
             var obj = {};
 
-            if (response[2].part == "seats") {
+            if (response[3].part == "seats") {
 
                 resolve(response);
             }
@@ -90,27 +112,7 @@ export function orderSeats(response) {
     })
 
 }
-export function orderChassis(response) {
-    return new Promise((resolve, reject) => {
-        console.log("chassis");
-        setTimeout(() => {
-            var obj = {};
 
-            if (response[3].part == "chassis") {
-                resolve(response);
-            }
-            else {
-                obj.error = "Wrong part in orderChassis"
-                obj.status = 401;
-                reject(obj)
-            }
-
-
-
-        }, r())
-    })
-
-}
 
 export function orderCar(response) {
     return new Promise((resolve, reject) => {

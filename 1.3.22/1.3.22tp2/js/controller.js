@@ -3,19 +3,19 @@ import * as V  from "./view.js";
 
 
 export function init () {
-    M.start().then(M.orderEngine).then(result=>{
+    M.start().then(M.orderChassis).then(result=>{
             V.imgURL.src=result[0].URL
-            return M.orderWheels(result)
+            return M.orderEngine(result)
         }
     )
   .then(result=>{
             V.imgURL.src=result[1].URL
-            return M.orderSeats(result)
+            return M.orderWheels(result)
         }
     )
  .then(result=>{
         V.imgURL.src=result[2].URL
-        return M.orderChassis(result)
+        return M.orderSeats(result)
     }
 )
     .then(result=>{
