@@ -1,0 +1,17 @@
+#main{
+    margin:20px; 
+}
+
+.input-group{
+    width:50vw;
+    margin: 0vw 20vw;
+}
+
+.card{
+    margin: 4vw;
+    width: 15rem;
+}
+
+.float-right{
+    float: right;
+}
