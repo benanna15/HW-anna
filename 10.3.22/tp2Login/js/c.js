@@ -50,8 +50,8 @@ if(localStorage.user){
     })}}
 else{
 
-  var inputs = M.getRegInputData(); // array with input info
-  var btn = V.initRegister(inputs) // creates the form, AND returns the button
+  var inputs = M.getRegInputData(); 
+  var btn = V.initRegister(inputs)
   btn.submit.addEventListener("click",function(){
     M.register(inputs)})
   btn.span.addEventListener("click",function(){
