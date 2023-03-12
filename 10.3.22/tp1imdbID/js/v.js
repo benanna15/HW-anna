@@ -11,6 +11,7 @@ export function init(){
     var Home = new MySection("home-page", "input-group");
     form.searchbar = new MyInput("form1", "form-control rounded", "text", "Search movies ...");
     form.btn= new MyButton ("btn","btn btn-outline-primary","search")
+   
 
     Home.append(form.searchbar,form.btn)
     main.append(Home)
@@ -19,6 +20,11 @@ export function init(){
 }
 
  export function makeBoxesForMovies(result){
+
+  var oldResults = document.querySelector('.results-movies');
+    if (oldResults) {
+        oldResults.remove();
+    }
 
     var arr=result.movies
     console.log(arr);
@@ -80,6 +86,10 @@ export function plotText(x){
    
 
   export function createPageButtons(x, y) {
+    var oldButtons = document.querySelector('.page-numbers');
+    if (oldButtons) {
+        oldButtons.remove();
+    }
   console.log(x.totalResults);
     const totalPages = Math.ceil(x.totalResults / y);
   var arr=[]

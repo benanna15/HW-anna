@@ -14,8 +14,7 @@ console.log(form.searchbar.value);
             posterID()
             V.createPageButtons(movies,10)
             buttonsID(form.searchbar.value)
-            console.log("ok");
-            console.log(page)
+         
             
                     }).catch((err) => {
                         console.log(err);
