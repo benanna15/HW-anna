@@ -1,8 +1,7 @@
 export  function search(x,page) {
-    console.log(x);
+   
     x=encodeURIComponent(x)
-    console.log(x)
-    console.log(`http://www.omdbapi.com/?apikey=1e336e4d&s=${x}&page=${page}`);
+   
     return new Promise((resolve, reject) => {
       fetch(`http://www.omdbapi.com/?apikey=1e336e4d&s=${x}&page=${page}`, {
         method: "POST",
